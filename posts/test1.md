@@ -1,8 +1,8 @@
 ---
 title: 'ブログを初めてみた'
-date: '2022-10-06'
+date: '2022-10-22'
 category: '雑多'
-excerpt: ''
+excerpt: '初めまして！くらとよと申します。私は最近Reactを勉強していて、このサイトはその練習で作っています。'
 cover_image: '/images/posts/img1.jpg'
 ---
 初めまして！くらとよと申します

@@ -1,16 +1,20 @@
 import Link from "next/link";
 import Image from "next/image";
-
+import React, { useState } from "react";
 const Sidemenu = () => {
+  const [openMenu, setOpenMenu] = useState(false);
+  const menuFunction = () => {
+    setOpenMenu(!openMenu);
+  };
   return (
     <div className="sidemenu">
-      <div className="profile">
+      <div className="profile side_contents">
         <div className="basic">
           <div className="background">
             <Image src="/images/profile.jpg" layout="fill"></Image>
           </div>
           <div className="icon">
-            <img src="/images/TOYO_ICON.png"></img>
+            <img src="/images/TOYO_ICON.jpeg"></img>
           </div>
           <div className="name">
             くらとよ<small>(kuratoyo)</small>
