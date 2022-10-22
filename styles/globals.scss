@@ -1,0 +1,253 @@
+@import url("https://fonts.googleapis.com/css2?family=Kosugi&family=Noto+Sans+JP:wght@700&display=swap");
+@import "~tailwindcss/base";
+@import "~tailwindcss/components";
+@import "~tailwindcss/utilities";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Kosugi", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+img {
+  width: 100%;
+}
+
+header {
+  background: rgb(255, 255, 255);
+  color: #fff;
+  padding: 5px;
+  margin-bottom: 40px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.37);
+}
+
+header a {
+  color: #fff;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  overflow: auto;
+  padding: 0 10px;
+}
+
+.main {
+  display: flex;
+  margin-bottom: 5px;
+}
+
+#logo_image {
+  width: 200px;
+  margin-top: 6px;
+}
+
+.posts {
+  width: 68%;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.sidemenu {
+  margin-left: 2%;
+  margin-top: 15px;
+  width: 290px;
+}
+
+.profile {
+  background-color: rgba(255, 255, 255, 0.5);
+  z-index: 0;
+  position: relative;
+  box-shadow: 0 0px 8px 0 rgb(0 0 0 / 20%);
+  text-align: center;
+  height: 310px;
+  width: 100%;
+  border-radius: 10px;
+  padding: 10%;
+  overflow: hidden;
+  .basic {
+    padding-top: 20px;
+  }
+  .background {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 150px;
+    width: 100%;
+    z-index: -1;
+  }
+
+  .background::before {
+    content: "";
+    position: absolute;
+    top: 86px;
+    left: 0px;
+    width: 100%;
+    height: 64px;
+    z-index: 1;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), white);
+  }
+  .icon {
+    border: solid white 5px;
+    margin: 0 auto;
+    width: 90px;
+    box-shadow: #6c6c6c 0px 0px 11px;
+    overflow: hidden;
+    border-radius: 100%;
+    img {
+      overflow: hidden;
+    }
+  }
+  .name {
+    padding-top: 15px;
+    font-family: "Kosugi", sans-serif;
+    color: #3f3f3f;
+    font-size: 24px;
+    font-weight: bold;
+    text-shadow: 0px 0px 3px #b9b9b9b5;
+    small {
+      font-size: 15px;
+    }
+  }
+  .explanation {
+    padding-top: 13px;
+    font-size: 13px;
+    color: gray;
+  }
+  .Links {
+    margin-top: 10px;
+    .github {
+      fill: #000000;
+    }
+    .twitter {
+      fill: #1d9bf0;
+      margin-left: 20px;
+    }
+  }
+}
+
+.card {
+  overflow: hidden;
+  margin-top: 15px;
+  display: flex;
+  height: 200px;
+  border-radius: 10px;
+  box-shadow: 0 0px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.1s;
+}
+
+.card:hover {
+  cursor: pointer;
+  transition: 0.1s;
+  .card-title {
+    color: #1d9bf0;
+    transition: 0.1s;
+  }
+}
+
+.card-image {
+  width: 30%;
+  object-fit: cover;
+  transition: 0.1s;
+}
+
+.card-title {
+  font-family: "Noto Sans JP", sans-serif;
+  color: #262626;
+  font-size: 24px;
+  font-weight: 300;
+}
+
+.card-moreinfo {
+  display: flex;
+  padding-top: 8px;
+  font-size: 12px;
+  align-items: center;
+}
+
+.card-date {
+  padding-left: 2px;
+  color: #832424;
+}
+
+.card-category {
+  padding-left: 2px;
+}
+
+.card-info {
+  width: 70%;
+  position: relative;
+  .content {
+    width: 95%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.card-excerpt {
+  padding-top: 8px;
+  color: #8d8d8d;
+  font-family: "Kosugi", sans-serif;
+  font-size: 11px;
+}
+
+.card-page {
+  padding: 15px 30px;
+}
+
+.separator {
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+.post-title {
+  margin: 10px 0;
+}
+
+.post-date {
+  background: #f4f4f4;
+  margin-bottom: 20px;
+  padding: 3px 10px;
+}
+
+.post-body ul,
+ol {
+  font-size: 110%;
+  line-height: 2.3;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.post-body pre {
+  background: #f4f4f4;
+  padding: 20px;
+  margin: 20px 0;
+  line-height: 2.3;
+}
+
+@media (max-width: 650px) {
+  .main {
+    display: block;
+  }
+  .posts {
+    width: 100%;
+  }
+
+  .card {
+    height: 115px;
+  }
+
+  .sidemenu {
+    width: 100%;
+  }
+}
