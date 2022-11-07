@@ -1,6 +1,7 @@
 import "../styles/globals.scss";
 import "../styles/background.css";
 import "../styles/blog.scss";
+import "../styles/humburgur.scss";
 import Header from "../components/Header.jsx";
 import Background from "../components/Background.jsx";
 
